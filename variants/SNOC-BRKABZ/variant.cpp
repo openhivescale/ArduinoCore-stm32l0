@@ -24,6 +24,9 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * WITH THE SOFTWARE.
+ *
+ * Pierre Beck  04/03/19  Support for SNOC BRKABZ Based on Grasshopper-L082CZ
+ * https://yadom.fr/kit-carte-breakout-brkabz01.html
  */
 
 #include "Arduino.h"
@@ -73,7 +76,7 @@ extern const PinDescription g_APinDescription[PINS_COUNT] =
     
     { GPIOH, STM32L0_GPIO_PIN_MASK(STM32L0_GPIO_PIN_PH1), STM32L0_GPIO_PIN_PH1,             (PIN_ATTR_EXTI),                              PWM_INSTANCE_NONE,  PWM_CHANNEL_NONE, ADC_CHANNEL_NONE }, // 27 BUILTIN LED
     
-    // 22..25 - Special pins (USB_DM, USB_DP, USB_VBUS, SFLASH_CS)
+    // Special pins (USB_DM, USB_DP, USB_VBUS, SFLASH_CS)
     { NULL,  STM32L0_GPIO_PIN_MASK(STM32L0_GPIO_PIN_PA11), STM32L0_GPIO_PIN_PA11,           (PIN_ATTR_EXTI),                               PWM_INSTANCE_NONE,  PWM_CHANNEL_NONE, ADC_CHANNEL_NONE }, // 28
     { NULL,  STM32L0_GPIO_PIN_MASK(STM32L0_GPIO_PIN_PA12), STM32L0_GPIO_PIN_PA12,           (PIN_ATTR_EXTI),                               PWM_INSTANCE_NONE,  PWM_CHANNEL_NONE, ADC_CHANNEL_NONE }, // 29
     { NULL,  STM32L0_GPIO_PIN_MASK(STM32L0_GPIO_PIN_PA5),  STM32L0_GPIO_PIN_PA5,            0,                                             PWM_INSTANCE_NONE,  PWM_CHANNEL_NONE, ADC_CHANNEL_NONE }, // 30
