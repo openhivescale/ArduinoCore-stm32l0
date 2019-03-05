@@ -525,3 +525,65 @@ NUCLEO-L073RZ.menu.opt.o3=Fastest
 NUCLEO-L073RZ.menu.opt.o3.build.flags.optimize=-O3
 NUCLEO-L073RZ.menu.opt.o3.build.flags.ldspecs=
 
+
+# SNOC BRKABZ (Pierre Beck 04/03/19)
+# ---------------------------------------
+SNOC-BRKABZ.name=SNOC-BRKABZ
+SNOC-BRKABZ.vid.0=0x0483
+SNOC-BRKABZ.pid.0=0xdf11
+
+SNOC-BRKABZ.upload.tool=stm32l0_dfu
+SNOC-BRKABZ.upload.protocol=dfu
+SNOC-BRKABZ.upload.maximum_size=196608
+SNOC-BRKABZ.upload.maximum_data_size=20480
+SNOC-BRKABZ.upload.use_1200bps_touch=true
+SNOC-BRKABZ.upload.wait_for_upload_port=false
+SNOC-BRKABZ.upload.native_usb=false
+
+SNOC-BRKABZ.build.mcu=cortex-m0plus
+SNOC-BRKABZ.build.f_cpu=32000000L
+SNOC-BRKABZ.build.board=STM32L0_BRKABZ
+SNOC-BRKABZ.build.arch=stm32l0
+SNOC-BRKABZ.build.core=arduino
+SNOC-BRKABZ.build.vid=0x0483
+SNOC-BRKABZ.build.pid=0xdf11
+SNOC-BRKABZ.build.did=0xffff
+SNOC-BRKABZ.build.usb_manufacturer="BECK"
+SNOC-BRKABZ.build.usb_product="Refuelink"
+SNOC-BRKABZ.build.extra_flags=-DSTM32L082xx -march=armv6-m -mthumb -mabi=aapcs -mfloat-abi=soft -fsingle-precision-constant {build.usb_flags}
+SNOC-BRKABZ.build.ldscript=linker_scripts/STM32L082CZ_FLASH.ld
+SNOC-BRKABZ.build.openocdscript=openocd_scripts/grasshopper-l082cz.cfg
+SNOC-BRKABZ.build.variant=SNOC-BRKABZ
+SNOC-BRKABZ.build.variant_system_libs="-L{runtime.platform.path}/system/STM32L0xx/Lib" "-L{runtime.platform.path}/system/CMSIS/Lib" -lstm32l082xx -larm_cortexM0l_math
+SNOC-BRKABZ.build.variant_system_include="-I{runtime.platform.path}/system/CMSIS/Include" "-I{runtime.platform.path}/system/CMSIS/Device/ST/STM32L0xx/Include" "-I{runtime.platform.path}/system/STM32L0xx/Include" 
+
+SNOC-BRKABZ.menu.usb.cdc=Serial
+SNOC-BRKABZ.menu.usb.cdc.build.usb_type=USB_TYPE_CDC
+SNOC-BRKABZ.menu.usb.cdc_msc=Serial + Mass Storage
+SNOC-BRKABZ.menu.usb.cdc_msc.build.usb_type=USB_TYPE_CDC_MSC
+SNOC-BRKABZ.menu.usb.cdc_hid=Serial + Keyboard + Mouse
+SNOC-BRKABZ.menu.usb.cdc_hid.build.usb_type=USB_TYPE_CDC_HID
+SNOC-BRKABZ.menu.usb.cdc_msc_hid=Serial + Mass Storage + Keyboard + Mouse
+SNOC-BRKABZ.menu.usb.cdc_msc_hid.build.usb_type=USB_TYPE_CDC_MSC_HID
+SNOC-BRKABZ.menu.usb.none=No USB
+SNOC-BRKABZ.menu.usb.none.build.usb_type=USB_TYPE_NONE
+
+SNOC-BRKABZ.menu.speed.32=32 MHz
+SNOC-BRKABZ.menu.speed.32.build.f_cpu=32000000L
+SNOC-BRKABZ.menu.speed.16=16 MHz (No USB)
+SNOC-BRKABZ.menu.speed.16.build.f_cpu=16000000L
+SNOC-BRKABZ.menu.speed.4=4.2 MHz (No USB)
+SNOC-BRKABZ.menu.speed.4.build.f_cpu=4200000L
+
+SNOC-BRKABZ.menu.opt.os=Smallest Code
+SNOC-BRKABZ.menu.opt.os.build.flags.optimize=-Os
+SNOC-BRKABZ.menu.opt.os.build.flags.ldspecs=--specs=nano.specs
+SNOC-BRKABZ.menu.opt.o1=Fast
+SNOC-BRKABZ.menu.opt.o1.build.flags.optimize=-O1
+SNOC-BRKABZ.menu.opt.o1.build.flags.ldspecs=
+SNOC-BRKABZ.menu.opt.o2=Faster
+SNOC-BRKABZ.menu.opt.o2.build.flags.optimize=-O2
+SNOC-BRKABZ.menu.opt.o2.build.flags.ldspecs=
+SNOC-BRKABZ.menu.opt.o3=Fastest
+SNOC-BRKABZ.menu.opt.o3.build.flags.optimize=-O3
+SNOC-BRKABZ.menu.opt.o3.build.flags.ldspecs=
