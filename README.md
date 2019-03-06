@@ -20,6 +20,7 @@ ArduinoCore-stm32l0 is targeted at ultra low power scenarios, sensor hubs, with 
 
 ### SNOC
  * [BRKABZ01](https://yadom.eu/kit-carte-breakout-brkabz01.html)
+ (while not merged into grumpyoldpizza's version, don't use json in board manager, but follow "From git" section and replace git URl by this one)
 
 ## Installing
 
